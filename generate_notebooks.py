@@ -3,7 +3,13 @@ from optparse import OptionParser
 import jupytext
 import copy
 
-parser = OptionParser()
+usage ="""usage: %prog master_file [options]
+
+  master_file: "master" notebook containing both exercises and solutions,
+               in any format understood by jupytext (https://jupytext.readthedocs.io)
+"""
+
+parser = OptionParser(usage=usage)
 parser.add_option('-s', '--solution', dest='solution_file',
                 help='solution output file name')
 
